@@ -1,0 +1,101 @@
+<div id="wrapper" class="row ng-scope">
+	<div id="divLoading">
+	</div>
+	<header>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper blue lighten-2">
+					<ul class="hide-on-med-and-down">
+						<li><a href="signup.html" class="bold brand-logo center">&nbsp&nbsp&nbsp<img
+								src="twitter_transparent.ico">&nbsp&nbsp&nbsp
+						</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<br>
+	<main>
+		<div class="row">
+			<div class="col s12 m4 l2">
+				<p></p>
+			</div>
+			<div class="col s12 m4 l8">
+				<div class="card z-depth-5">
+					<div class="card-content">
+						<h5 class="black-text text-lighten-1 center-align">Join
+							Twitter today</h5>
+					</div>
+					<div class="card-content">
+						<div class="row">
+							<form class="col s12">
+								<div class="row">
+									<div class="input-field col s6">
+										<input id="first_name" type="text" class="validate" ng-model="first_name" maxlength="128" required> 
+										<label for="first_name">First Name</label>
+									</div>
+									<div class="input-field col s6">
+										<input id="last_name" type="text" class="validate" ng-model="last_name" maxlength="128" required> 
+										<label for="last_name">Last Name</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field col s12">
+										<label for="birthdate">Birthdate</label> 
+										<input id="birthdate" type="date" class="datepicker" ng-model="birthday">
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field col s12">
+										<input id="email" type="email" class="validate" ng-model="email"  maxlength="50" required> 
+										<label for="email">Email</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field col s12">
+										<input id="password" type="password" class="validate" ng-model="password" maxlength="128" required>
+										<label for="password">Password</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field col s12">
+										<input id="icon_telephone" type="tel" class="validate" maxlength="12" ng-model="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" required> 
+										<label for="icon_telephone">Phone</label>
+									</div>
+									<label>Number should be of the format 999-999-9999
+									</label>
+								</div>
+								<div class="row">
+									<div class="input-field col s12">
+										<input id="location" type="text" class="validate" ng-model="city"  maxlength="50" required> 
+										<label for="location">City</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="input-field col s12">
+										<input id="handle" type="text" class="validate"	ng-model="handle" pattern="[a-zA-Z0-9_|]{4,128}" placeholder="                           eg: MrAwesome" maxlength="20" required>
+										<label>Twitter Handle</label>
+									</div>
+									<label>Give a alphanumeric handle for yourself!<br>Oh
+										BTW its case sensitive
+									</label>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="card-action center-align">
+						<a class="waves-effect red btn" href="/">Cancel</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+						<a class="waves-effect green btn" ng-click="doSignUp()">Sign Up</a> 
+						<br> 
+						<input type="checkbox" id="test5" required/> 
+							<label for="test5">
+								By signing up, you agree to the Terms of Service and Privacy Policy,
+								including Cookie Use. Others will be able to find you by email or
+								phone number when provided.
+							</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>

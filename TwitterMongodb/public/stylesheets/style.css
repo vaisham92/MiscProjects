@@ -1,0 +1,113 @@
+.myspinner {
+   position: relative; //Added this
+   background-color: #FFFFFF;
+   opacity: 0.50;
+}
+
+#divLoading
+{
+    display : none;
+}
+#divLoading.show
+{
+    display : block;
+    position : fixed;
+    z-index: 100;
+    background-image : url('http://loadinggif.com/images/image-selection/3.gif');
+    background-color:#666;
+    opacity : 0.4;
+    background-repeat : no-repeat;
+    background-position : center;
+    left : 0;
+    bottom : 0;
+    right : 0;
+    top : 0;
+}
+#loadinggif.show
+{
+    left : 50%;
+    top : 50%;
+    position : absolute;
+    z-index : 101;
+    width : 32px;
+    height : 32px;
+    margin-left : -16px;
+    margin-top : -16px;
+}
+
+.border-bottom {
+    /* border-bottom: 1px solid #ddd; */
+}
+
+.border-right {
+    /* border-right: 1px solid #ddd; */
+}
+
+.borders {
+    /* border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd; */
+}
+.border-left {
+    /* border-left: 1px solid #ddd; */
+}
+
+.nameclass:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.nameclass:active {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#replyclass {
+   background-image: url('reply.png');
+   height: 28px;
+   width: 25px;
+   cursor: pointer;
+}
+
+#replyclass:hover {
+	background-image: url('reply-hover.png');
+	cursor: pointer;
+}
+
+#replyclass:active {
+	background-image: url('reply-hover.png');
+	cursor: pointer;
+}
+
+#retweetclass {
+	background-image: url('retweet.png');
+	height: 29px;
+	width: 30px;
+	cursor: pointer;
+}
+
+#retweetclass:hover {
+	background-image: url('retweet-hover.png');
+	cursor: pointer;
+}
+
+#retweetclass:active {
+	background-image: url('retweet-hover.png');
+	cursor: pointer;
+}
+
+#favoriteclass {
+	background-image: url('favorite.png');
+	height: 29px;
+	width: 22px;
+	cursor: pointer;
+}
+
+#favoriteclass:hover {
+	background-image: url('favorite-hover.png');
+	cursor: pointer;
+}
+
+#favoriteclass:active {
+	background-image: url('favorite-hover.png');
+	cursor: pointer;
+}

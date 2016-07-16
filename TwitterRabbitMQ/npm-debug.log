@@ -1,0 +1,86 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'amqprpc' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.2
+4 verbose install initial load of C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\package.json
+5 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\amqp\package.json
+6 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\assert\package.json
+7 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\body-parser\package.json
+8 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\client-sessions\package.json
+9 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\connect-mongo\package.json
+10 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\cookie-parser\package.json
+11 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\crypto\package.json
+12 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\debug\package.json
+13 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\ejs\package.json
+14 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\express\package.json
+15 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\express-session\package.json
+16 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\favicon\package.json
+17 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\http\package.json
+18 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\mocha\package.json
+19 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\mongodb\package.json
+20 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\morgan\package.json
+21 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\mysql\package.json
+22 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\request\package.json
+23 verbose installManyTop reading scoped package data from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\node_modules\serve-favicon\package.json
+24 info package.json client-sessions@0.7.0 No license field.
+25 info package.json http@0.0.0 http is also the name of a node core module.
+26 info package.json http@0.0.0 No description
+27 info package.json http@0.0.0 No repository field.
+28 info package.json http@0.0.0 No README data
+29 info package.json amqp@0.2.4 No license field.
+30 info package.json assert@1.3.0 assert is also the name of a node core module.
+31 info package.json crypto@0.0.3 crypto is also the name of a node core module.
+32 info package.json crypto@0.0.3 No license field.
+33 info package.json express@3.2.6 No license field.
+34 info package.json favicon@0.0.2 No license field.
+35 verbose readDependencies loading dependencies from C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ\package.json
+36 silly cache add args [ 'amqprpc', null ]
+37 verbose cache add spec amqprpc
+38 silly cache add parsed spec Result {
+38 silly cache add   raw: 'amqprpc',
+38 silly cache add   scope: null,
+38 silly cache add   name: 'amqprpc',
+38 silly cache add   rawSpec: '',
+38 silly cache add   spec: 'latest',
+38 silly cache add   type: 'tag' }
+39 silly addNamed amqprpc@latest
+40 verbose addNamed "latest" is being treated as a dist-tag for amqprpc
+41 info addNameTag [ 'amqprpc', 'latest' ]
+42 silly mapToRegistry name amqprpc
+43 silly mapToRegistry using default registry
+44 silly mapToRegistry registry https://registry.npmjs.org/
+45 silly mapToRegistry uri https://registry.npmjs.org/amqprpc
+46 verbose addNameTag registry:https://registry.npmjs.org/amqprpc not in flight; fetching
+47 verbose request uri https://registry.npmjs.org/amqprpc
+48 verbose request no auth needed
+49 info attempt registry request try #1 at 5:52:29 PM
+50 verbose request id 02db83dd05239126
+51 http request GET https://registry.npmjs.org/amqprpc
+52 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+53 info attempt registry request try #2 at 5:52:39 PM
+54 http request GET https://registry.npmjs.org/amqprpc
+55 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+56 info attempt registry request try #3 at 5:53:39 PM
+57 http request GET https://registry.npmjs.org/amqprpc
+58 verbose stack Error: getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+58 verbose stack     at errnoException (dns.js:26:10)
+58 verbose stack     at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:77:26)
+59 verbose cwd C:\Users\Vaishampayan Reddy\workspace\TwitterRabbitMQ
+60 error Windows_NT 6.3.9600
+61 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "amqprpc"
+62 error node v4.3.2
+63 error npm  v2.14.12
+64 error code ENOTFOUND
+65 error errno ENOTFOUND
+66 error syscall getaddrinfo
+67 error network getaddrinfo ENOTFOUND registry.npmjs.org registry.npmjs.org:443
+67 error network This is most likely not a problem with npm itself
+67 error network and is related to network connectivity.
+67 error network In most cases you are behind a proxy or have bad network settings.
+67 error network
+67 error network If you are behind a proxy, please make sure that the
+67 error network 'proxy' config is set properly.  See: 'npm help config'
+68 verbose exit [ 1, true ]

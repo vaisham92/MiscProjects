@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Twitter</title>
+
+<base href="/" />
+
+<!-- Angular library dependencies -->
+<script src="Angular/lib/angular.min.js"></script>
+<script src="Angular/lib/angular-route.js"></script>
+<script src="Angular/lib/angular-route.min.js"></script>
+<script src="Angular/lib/angular-sanitize.min.js"></script>
+<script src="Angular/lib/angular-ui-router.min.js"></script>
+
+<!-- libraries -->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Css folder -->
+<link type="text/css" href="stylesheets/style.css" rel="stylesheet"
+	media="screen,projection" />
+<link type="text/css" href="lib/css/icon.css" rel="stylesheet"
+	media="screen,projection" />
+<link type="text/css" href="lib/css/sticky-footer.css" rel="stylesheet"
+	media="screen,projection" />
+
+<!--  Materialize lib -->
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+<!-- Angular project dependencies -->
+<script type="text/javascript" src="js/twitter-application.js"></script>
+<script type="text/javascript" src="js/main-controller.js"></script>
+<script type="text/javascript" src="js/spinner-controller.js"></script>
+<script type="text/javascript" src="js/signup-controller.js"></script>
+<script type="text/javascript" src="js/login-controller.js"></script>
+<script type="text/javascript" src="js/home-controller.js"></script>
+<script type="text/javascript" src="js/myprofile-controller.js"></script>
+<script type="text/javascript" src="js/profile-controller.js"></script>
+<script type="text/javascript" src="js/hashtag-controller.js"></script>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="https://abs.twimg.com/favicons/favicon.ico" />
+</head>
+<body ng-app="twitter" bgcolor="#E9F5FC">
+	<div ng-view>
+		<div ui-view="">
+			<div id="wrapper" class="">
+			</div>
+		</div>
+	</div>
+	<footer class="page-footer blue lighten-2">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">Twitter Inc.</h5>
+					<p class="grey-text text-lighten-4">See what's happening right now.</p>
+					<p class="grey-text text-lighten-4">Find community, conversation and inspiration about the things you love.</p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="">Popular Tweets</a></li>
+						<li><a class="grey-text text-lighten-3" href="">Careers</a></li>
+						<li><a class="grey-text text-lighten-3" href="">Contact Us</a></li>
+						<li><a class="grey-text text-lighten-3" href="">About Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				© 2016 Copyright @Vaishampayan Reddy Pathuri
+				<a class="grey-text text-lighten-4 right" href="">More Info about the author</a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

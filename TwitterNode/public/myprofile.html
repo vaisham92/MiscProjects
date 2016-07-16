@@ -1,0 +1,232 @@
+<div id="wrapper" class="row ng-scope">
+	<div id="divLoading"></div>
+	<header>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper white">
+					<ul class="left hide-on-med-and-down">
+						<li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+						<li><a class="waves-effect blue-text text-lighten-1"
+							ng-click="goToHomePage()"><i class="material-icons left">home</i>Home</a></li>
+						<li><a class="waves-effect blue-text text-lighten-1"
+							ng-click="goToHomePage()"><i class="material-icons left">notifications</i>Notifications</a></li>
+						<li><a class="waves-effect blue-text text-lighten-1"
+							ng-click="goToHomePage()"><i class="material-icons left">mail</i>Messages</a></li>
+						<li><div class="bold brand-logo center">
+								&nbsp&nbsp&nbsp<img src="twitter_blue.ico">&nbsp&nbsp&nbsp
+							</div></li>
+					</ul>
+					<ul class="right hide-on-med-and-down">
+						<li>
+							<div class="input-field grey lighten-4">
+								<input id="search" ng-model="searchText" type="search" ng-keydown="$event.which === 13 && search()" placeholder="Search Twitter" required> <label
+									for="search" ><i class="material-icons">search</i></label> <i
+									class="material-icons">close</i>
+							</div>
+						</li>
+						<li>
+							<div title="logout"><a class="waves-effect blue-text text-lighten-1" ng-click="logout()"><i
+								class="material-icons">power_settings_new</i></a></div>
+						</li>
+						<li><a
+							class="waves-effect waves-light hoverable blue lighten-2"
+							href="#"> <i class="material-icons left">border_color</i>Tweet
+						</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<main>
+	<div>
+		<div class="row">
+			<div class="col s12">
+				<div class="card white">
+					<div class="card-image">
+						<img src="twitter_blue.png" height="180">
+					</div>
+					<div class="card-content">
+						<div class="row">
+							<div class="col s4 m6 l2">
+								<a href=""> <img class="hoverable"
+									src="https://pbs.twimg.com/profile_images/524943875543420928/-0QwXz_i_400x400.jpeg"
+									height="220" width="220"
+									style="border: 5px #efefef solid; border-radius: 10%;">
+								</a>
+							</div>
+							<div class="col s4 m6 l10">
+								<div class="row">
+									<div class="col s12">
+										<h4><b> <a href="{{profile.self_url}}"
+											class="waves-effect black-text text-lighten-1 nameclass">{{profile.first_name}}
+												{{profile.last_name}}</a>
+										</b>
+										</h4>
+									</div>
+									<div class="row">
+										<div class="col s12">
+											<h5><a href="{{profile.self_url}}"
+												class="waves-effect grey-text text-lighten-1 nameclass">@{{profile.handle}}</a>
+											</h5>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col s4 m6 l4">
+										<h5><p class="waves-effect grey-text text-darken-2">TWEETS</p>
+										<br><p class="waves-effect blue-text text-darken-2">{{profile.tweetscount}}</p></h5>
+									</div>
+									<div class="col s4 m6 l4">
+										<h5><p class="waves-effect grey-text text-darken-2">FOLLOWING</p>
+										<br><p class="waves-effect blue-text text-darken-2">{{profile.followingcount}}</p></h5>
+									</div>
+									<div class="col s4 m6 l4">
+										<h5><p class="waves-effect grey-text text-darken-2">FOLLOWERS</p>
+										<br><p class="waves-effect blue-text text-darken-2">{{profile.followerscount}}</p></h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col s12 m2 l3">
+					<div class = "row">
+						<div class="card white">
+							<div class="card-content">
+								<div class="row">
+									<div class="col s12">
+										<div class="row">
+											<b>Firstname : </b><b class="waves-effect blue-text text-lighten-1 nameclass">{{profile.first_name}}</b>
+										</div>
+										<div class="row">
+											<b>Lastname : </b><b class="waves-effect blue-text text-lighten-1 nameclass">{{profile.last_name}}</b>
+										</div>
+										<div class="row">
+											<b>Handle : </b><b class="waves-effect blue-text text-lighten-1 nameclass">@{{profile.handle}}</b>
+										</div>
+										<div class="row">
+											<b>Phone : </b><b class="waves-effect blue-text text-lighten-1 nameclass">{{profile.phone}}</b>
+										</div>
+										<div class="row">
+											<b>Location : </b><b class="waves-effect blue-text text-lighten-1 nameclass">{{profile.city}}</b>
+										</div>
+										<div class="row">
+											<b>Birthday : </b><b class="waves-effect blue-text text-lighten-1 nameclass">{{profile.birthday}}</b>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class = "row">
+						<div class="col s12">
+							<div class="card-panel white">
+								<div class="row">
+									<h5>
+										<span>Trends</span>
+									</h5>
+									<div ng-repeat="HashTag in HashTags">
+										<!-- repeat here the trends hash tags -->
+										<div class="col s12">
+											<a class="waves-effect blue-text text-lighten-1 nameclass" href="{{HashTag.self_url}}">{{HashTag.hashtag}}</a>
+											<br> <a
+												class="waves-effect black-text text-lighten-1 nameclass" href="{{HashTag.self_url}}">{{HashTag.count}}
+												Tweets</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m2 l6">
+					<div class="row borders">
+						<div ng-repeat="Tweet in Tweets | filter:Tweet.created_at">
+							<!-- repeat here -->
+							<!-- you need to repeat this -->
+							<div class="col s12 border-bottom">
+								<div class="card">
+									<div class="card-content">
+										<div class="row">
+											<p></p>
+										</div>
+										<div class="row">
+											<div class="col s12 m4 l1">
+												<a href="{{Tweet.self_url}}"><img
+													class="hoverable" style="border-radius: 6px"
+													src="https://pbs.twimg.com/profile_images/524943875543420928/-0QwXz_i_400x400.jpeg"
+													height="50" width="45"></a>
+											</div>
+											<div class="col s12 m4 l11">
+												<a href="{{Tweet.self_url}}"
+													class="waves-effect black-text text-lighten-1 nameclass"><b>{{Tweet.first_name}}
+														{{Tweet.last_name}}</b></a> <a href="{{Tweet.self_url}}"
+													class="waves-effect grey-text text-lighten-1 nameclass">@{{Tweet.handle}}</a>
+												-{{Tweet.created_at}}
+											</div>
+										</div>
+										<div class="row">
+											<div class="col s12 m3 l1">
+												<p></p>
+											</div>
+											<div class="col s12 m3 l11">
+												<p style="word-wrap: break-word;">{{Tweet.tweet}}</p>
+											</div>
+										</div>
+										<div class="row divider"></div>
+										<div class="row">
+											<div class="col s12 m2 l2">
+												<div id="replyclass" ng-click="replyToTweet(Tweet.tweetid)"></div>
+											</div>
+											<div class="col s12 m2 l2">
+												<div id="retweetclass" ng-click="retweet(Tweet.tweetid)"></div>
+											</div>
+											<div class="col s12 m2 l2">
+												<div id="favoriteclass" ng-click="like(Tweet.tweetid)"></div>
+											</div>
+											<div class="col s12 m2 l2">
+												<a href=""><i class="material-icons">more_horiz</i></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m2 l3">
+					<div class="card-panel white">
+						<h5 class="">Who to follow</h5>
+						<div ng-repeat="guy in newguys">
+							<!-- repeat follow people here -->
+							<div class="row">
+								<div class="col s6 m4 l3">
+									<a href=""> <img class="hoverable"
+										style="border-radius: 6px"
+										src="https://pbs.twimg.com/profile_images/524943875543420928/-0QwXz_i_400x400.jpeg"
+										height="55" width="55">
+									</a>
+								</div>
+								<div class="col s6 m4 l5">
+									<a href=""
+										class="waves-effect black-text text-lighten-1 nameclass">{{guy.first_name}}
+										{{guy.last_name}}</a> <a href=""
+										class="waves-effect grey-text text-lighten-1 nameclass">@{{guy.handle}}</a>
+								</div>
+								<div class="col s6 m4 l3">
+									<a class="btn white waves-effect waves-blue"
+										ng-click="follow(guy.puid)"><i
+										class="blue-text text material-icons">person_add</i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</main>
+
+</div>

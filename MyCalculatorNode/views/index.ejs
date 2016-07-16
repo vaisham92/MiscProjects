@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Calculator</title>
+      <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+      <link rel="stylesheet" href="/stylesheets/style.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.js" type="application/javascript"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js" type="application/javascript"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js" type="application/javascript"></script>
+      <script src="js/calculatorApp.js" type="application/javascript"></script>
+      <script src="js/bootstrap.min.js" type="application/javascript"></script>
+   </head>
+   <body>
+         <nav class="navbar navbar-default">
+            <div class="container-fluid">
+               <!-- Brand and toggle get grouped for better mobile display -->
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="">Calculator</a>
+               </div>
+            </div>
+            <!-- /.container-fluid -->
+         </nav>
+         <h4>Important Note:</h4>
+         In order to use the on screen keyboard for a particular text box mark the corresponding the radio button!
+      <div ng-app="calculatorApp" ng-controller="calculatorController">
+         <form>
+            <div class="radio">
+               <!-- max and min value validations so that operation does not return overflow value -->
+               <label><input type="radio" id="operandOneRadio" name="optradio">Operand One</label>
+               <input type="number" id="operandOne" ng-model="operandOne" class="form-control" aria-label="" max="1147483647" min="-1147483648" required>
+            </div>
+            <br>
+            <div class="radio">
+               <!-- max and min value validations so that operation does not return overflow value -->
+               <label><input type="radio" id="operandTwoRadio" name="optradio">Operand Two</label>
+               <input type="number" id="operandTwo" ng-model="operandTwo" class="form-control" aria-label="" max="1147483647" min="-1147483648" required>
+            </div>
+            <br>
+            <br>
+            <div class="btn-group btn-group-justified" role="group" aria-label="">
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary" ng-click="appendNumber('1')">1</button>
+               </div>
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary" ng-click="appendNumber('2');">2</button>
+               </div>
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary" ng-click="appendNumber('3');">3</button>
+               </div>
+            </div>
+            <div class="btn-group btn-group-justified" role="group" aria-label="">
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary" ng-click="appendNumber('4');">4</button>
+               </div>
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary" ng-click="appendNumber('5');">5</button>
+               </div>
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary" ng-click="appendNumber('6');">6</button>
+               </div>
+            </div>
+            <div class="btn-group btn-group-justified" role="group" aria-label="">
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary" ng-click="appendNumber('7');">7</button>
+               </div>
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary" ng-click="appendNumber('8');">8</button>
+               </div>
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary" ng-click="appendNumber('9');">9</button>
+               </div>
+            </div>
+            <div class="btn-group btn-group-justified" role="group" aria-label="">
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary" ng-click="appendNumber('.');">.</button>
+               </div>
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary" ng-click="appendNumber('0');">0</button>
+               </div>
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary" ng-click="appendNumber('00');">00</button>
+               </div>
+            </div>
+            <br>
+            <div class="btn-group btn-group-justified" role="group" aria-label="">
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-success" ng-click="performOperation('Addition')">Addition</button>
+               </div>
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-success" ng-click="performOperation('Subtraction')">Subtraction</button>
+               </div>
+            </div>
+            <div class="btn-group btn-group-justified" role="group" aria-label="">
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-success" ng-click="performOperation('Multiplication')">Multiplication</button>
+               </div>
+               <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-success" ng-click="performOperation('Division')">Division</button>
+               </div>
+            </div>
+            <br>
+            <div class="input-group">
+               <span class="input-group-addon" id="basic-addon1">Answer is: </span>
+               <label class="form-control" aria-describedby="basic-addon1">{{answer}}</label>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>
